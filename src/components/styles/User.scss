@@ -1,0 +1,44 @@
+@import "../../styles/thrubiColors";
+
+.everybody {
+    min-height: 250px;
+    opacity: 0.2;
+    filter: grayscale(100%) sepia(1) hue-rotate(160deg) blur(2px);
+    transform: scale(1.1);
+}
+
+.wealthy {
+    min-height: 250px;
+    opacity: 0.2;
+    filter: grayscale(100%) blur(2px);
+    transform: scale(1.1);
+}
+
+.societies {
+    min-height: 250px;
+    opacity: 0.2;
+    filter: grayscale(100%) sepia(1) hue-rotate(10deg) blur(2px);
+    transform: scale(1.1);
+}
+
+.opaque {
+    opacity: initial;
+}
+
+.thrubiBlue {
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.thrubiSilver {
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.thrubiGold {
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+}

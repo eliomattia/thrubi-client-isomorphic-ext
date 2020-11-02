@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=__GA_TRACKING_ID__"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config","__GA_TRACKING_ID__");
+    </script>
+    <meta charset="utf-8" />
+    <meta name="title" content="Thrubi"/>
+    <meta name="description" content="Thrubi is a worldwide community where demand for Universal Basic Income meets supply."/>
+    <meta name="keywords" content="thrubi,basic income,universal basic income,ubi,inequality,wealth,income,wealth inequality,income inequality"/>
+    <link rel="shortcut icon" href="%PUBLIC_URL%/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <base href="%PUBLIC_URL%/">
+    <title>Thrubi</title>
+  </head>
+  <body style="height:100%;">
+    <noscript>You need to enable JavaScript to run Thrubi.</noscript>
+    <script type="text/javascript" charset="utf-8">
+      window.THRUBI_ENV="__SERVER_THRUBI_ENV__";
+      window.REDUX_STATE_INIT="__SERVER_REDUX_STATE_INIT__";
+    </script>
+    <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=694691027687199" async defer crossorigin="anonymous"></script>
+    <div id="root" style="height:100%;display:flex;"></div>
+    <div id="fb-root"></div>
+  </body>
+</html>

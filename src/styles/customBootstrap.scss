@@ -1,0 +1,30 @@
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+@import "thrubiColors";
+@import "channelColors";
+
+$theme-colors: map-remove($theme-colors,"primary","secondary","success","danger","info","warning","light","dark","red");
+
+$theme-colors: (
+    "primary":    thrubiTheme("thrubi-primary"),
+    "secondary":  thrubiTheme("thrubi-secondary"),
+    "success":    thrubiTheme("thrubi-success"),
+    "danger":     thrubiTheme("thrubi-danger"),
+    "info":       thrubiTheme("thrubi-info"),
+    "warning":    thrubiTheme("thrubi-warning"),
+    "light":      thrubiTheme("thrubi-light"),
+    "dark":       thrubiTheme("thrubi-dark"),
+    "blockchain-ethereum":  channelTheme("channel-blockchain-ethereum"),
+    "keyboard":             channelTheme("channel-keyboard"),
+    "facebook":             channelTheme("channel-facebook"),
+    "linkedin":             channelTheme("channel-linkedin"),
+    "google":               channelTheme("channel-google"),
+    "paypal":               channelTheme("channel-paypal"),
+    "twitter":              channelTheme("channel-twitter"),
+    "patreon":              channelTheme("channel-patreon"),
+    "discord":              channelTheme("channel-discord"),
+    "red":        darkred,
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";

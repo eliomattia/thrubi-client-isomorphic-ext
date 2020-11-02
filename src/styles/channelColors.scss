@@ -1,0 +1,36 @@
+$channel-colors: (
+        "channel-blockchain-ethereum":    rgba( 60, 60, 61,1.0),
+        "channel-keyboard":               rgba(128,128,128,1.0),
+        "channel-facebook":               rgba( 59, 89,152,1.0),
+        "channel-linkedin":               rgba(  0,119,181,1.0),
+        "channel-google":                 rgba( 23,107,239,1.0),
+        "channel-paypal":                 rgba(  0, 48,135,1.0),
+        "channel-twitter":                rgba(  0,172,237,1.0),
+        "channel-patreon":                rgba(232, 91, 70,1.0),
+        "channel-discord":                rgba(114,137,218,1.0),
+);
+
+@function channelColor($channel-color) {
+  @return map-get($channel-colors,$channel-color);
+}
+
+@function channelTheme($channel-theme) {
+  $channel-blockchain-ethereum:   channelColor("channel-blockchain-ethereum");
+  $channel-keyboard:              channelColor("channel-keyboard");
+  $channel-facebook:              channelColor("channel-facebook");
+  $channel-linkedin:              channelColor("channel-linkedin");
+  $channel-google:                channelColor("channel-google");
+  $channel-paypal:                channelColor("channel-paypal");
+  $channel-twitter:               channelColor("channel-twitter");
+  $channel-patreon:               channelColor("channel-patreon");
+  $channel-discord:               channelColor("channel-discord");
+  @if ($channel-theme=="channel-blockchain-ethereum")   { @return $channel-blockchain-ethereum; }
+  @if ($channel-theme=="channel-keyboard")              { @return $channel-keyboard; }
+  @if ($channel-theme=="channel-facebook")              { @return $channel-facebook; }
+  @if ($channel-theme=="channel-linkedin")              { @return $channel-linkedin; }
+  @if ($channel-theme=="channel-google")                { @return $channel-google; }
+  @if ($channel-theme=="channel-paypal")                { @return $channel-paypal; }
+  @if ($channel-theme=="channel-twitter")               { @return $channel-twitter; }
+  @if ($channel-theme=="channel-patreon")               { @return $channel-patreon; }
+  @if ($channel-theme=="channel-discord")               { @return $channel-discord; }
+}

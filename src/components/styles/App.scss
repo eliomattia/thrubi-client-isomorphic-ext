@@ -1,0 +1,261 @@
+@import "../../styles/thrubiColors";
+
+.bgFlash {
+    background-color: rgba(255,255,255,0.98);
+}
+
+.bgLightTranslucent {
+    background-color: rgba(247,247,247,0.95);
+}
+
+.bgShadow {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.hoverBgWhite:hover .hovered {
+    background-color: rgba(255,255,255,1) !important;
+}
+
+.thrubiTitle {
+    padding: 7px 0 3px;
+}
+
+.fontThrubiTitle {
+    font-feature-settings: normal;
+    font-variant: small-caps;
+}
+
+.topLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.topRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.animated {
+    transition: all 0.4s cubic-bezier(0.2,0,0.3,1);
+}
+
+.sandwichMenu {
+    width: 40px;
+    height: 40px;
+}
+
+.sandwichMenu span {
+    width: 80%;
+    height: 4px;
+    margin: 0 auto;
+    display: block;
+    background: thrubiTheme("thrubi-secondary");
+}
+
+.animateHide {
+    visibility: hidden;
+}
+
+.animateHideFade {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hideLeft {
+    left: -100%;
+}
+
+.showLeft {
+    left: 0;
+}
+
+.sandwichMenu.loggedIn span {
+    background: thrubiTheme("thrubi-primary");
+}
+
+.sandwichMenu span:first-of-type {
+    /* rotate first one */
+    transform: rotate(45deg) translate(4px, 4px);
+}
+.sandwichMenu span:nth-of-type(2) {
+    /* second one is not visible */
+    opacity: 0;
+}
+.sandwichMenu span:last-of-type {
+    /* rotate third one */
+    transform: rotate(-45deg) translate(2px, -2px);
+}
+.sandwichMenu.active span {
+    /* no rotation */
+    transform: none;
+    /* all bars are visible */
+    opacity: 1;
+    margin: 5px auto;
+}
+
+.thrubiApp {
+    height: 100%;
+    // font-family: BentonSans, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+.overflowScroll {
+    overflow-y: scroll;
+}
+
+.topMargin {
+    margin: 47px 0 0 0;
+}
+
+.marginUserButton {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.sizeUserButton {
+    height: 35px;
+    width: 35px;
+}
+
+.formControlSandwich {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .5rem + 2px)!important;
+    padding: .25rem .5rem!important;
+    font-size: .875rem!important;
+    font-weight: 400!important;
+    line-height: 1.5!important;
+    color: #495057;
+    background-color: #fff;
+    background-clip: border-box!important;
+    border-left: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.formControlSandwichTrail {
+    border-top: 1px solid #ced4da!important;
+    border-bottom: none!important;
+}
+
+.formControlSandwichLast {
+    border-top: 1px solid #ced4da!important;
+    border-bottom: 1px solid #ced4da!important;
+}
+
+.noBottomBorder {
+    border-bottom: none!important;
+}
+
+.borderSuccess {
+    border: 1px solid thrubiTheme("thrubi-success")!important;
+}
+
+.roundedBottom {
+    border-bottom-left-radius: .25rem!important;
+    border-bottom-right-radius: .25rem!important;
+    border-top-left-radius: 0!important;
+    border-top-right-radius: 0!important;
+}
+
+.roundedTop {
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    border-top-left-radius: .25rem!important;
+    border-top-right-radius: .25rem!important;
+}
+
+.marginProfilePicture {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.sizeProfilePicture {
+    height: 45px;
+    width: 45px;
+}
+
+.sizeChannelIcon {
+    height: 32px;
+    width: 32px;
+}
+
+.memberPaddingX {
+    padding: 0 1.25rem !important;
+}
+
+.paddingX {
+    padding: 0.5rem 1.25rem !important;
+}
+
+.flareBox {
+    margin: 0 30px 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: small;
+    background: transparent;
+}
+
+.verticalAlign {
+    vertical-align: bottom;
+    align-content: center;
+}
+
+.logoThrubi {
+    margin: 6px 5px;
+}
+
+.country {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.ccy {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.thrubiGradient {
+    background: thrubiGradient("thrubi-gradient-r");
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.headerHeight {
+    height: 47px;
+ }
+
+.remainingHeight {
+    height: calc(100% - 47px);
+}
+
+.maxRemainingHeight {
+    max-height: calc(100% - 47px);
+}
+
+.footer {
+    min-width: 100%;
+}
+
+.wMin800 {
+    min-width: 800px;
+}
+
+.wMax800 {
+    max-width: 800px;
+}
+
+.consoleFont {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.ccyRowElement {
+    margin: 0;
+    padding: 0 !important;
+}
+
+.ccyRowContainer {
+    margin: 0 15px;
+    padding: 0 !important;
+}

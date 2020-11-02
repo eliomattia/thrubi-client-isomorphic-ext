@@ -1,0 +1,47 @@
+$thrubi-colors: (
+    "thrubi-blue":    rgba(135,206,250, 1.0),
+    "thrubi-silver":  rgba(  0,  0,  0, 1.0),
+    "thrubi-gold":    rgba(212,175, 55, 1.0),
+);
+
+@function thrubiColor($thrubi-color) {
+  @return map-get($thrubi-colors,$thrubi-color);
+}
+
+@function thrubiTheme($thrubi-theme) {
+  $thrubi-blue:   thrubiColor("thrubi-blue");
+  $thrubi-silver: thrubiColor("thrubi-silver");
+  $thrubi-gold:   thrubiColor("thrubi-gold");
+
+  $thrubi-primary:  scale-color($thrubi-blue,   $lightness: -70%);
+  $thrubi-secondary:scale-color($thrubi-silver, $lightness: +35%);
+  $thrubi-success:  scale-color($thrubi-gold,   $lightness: -40%);
+  $thrubi-info:     scale-color($thrubi-gold,   $lightness: +60%);
+  $thrubi-warning:  scale-color($thrubi-gold,   $lightness: +20%);
+  $thrubi-danger:   scale-color($thrubi-blue,   $lightness: +40%);
+  $thrubi-light:    scale-color($thrubi-silver, $lightness: +97%);
+  $thrubi-dark:     scale-color($thrubi-silver, $lightness: +25%);
+
+  @if ($thrubi-theme=="thrubi-primary")   { @return $thrubi-primary; }
+  @if ($thrubi-theme=="thrubi-secondary") { @return $thrubi-secondary; }
+  @if ($thrubi-theme=="thrubi-success")   { @return $thrubi-success; }
+  @if ($thrubi-theme=="thrubi-info")      { @return $thrubi-info; }
+  @if ($thrubi-theme=="thrubi-warning")   { @return $thrubi-warning; }
+  @if ($thrubi-theme=="thrubi-danger")    { @return $thrubi-danger; }
+  @if ($thrubi-theme=="thrubi-light")     { @return $thrubi-light; }
+  @if ($thrubi-theme=="thrubi-dark")      { @return $thrubi-dark; }
+}
+
+@function thrubiGradient($thrubi-gradient) {
+  $thrubi-gradient-titlebar:  linear-gradient(to bottom,    thrubiTheme("thrubi-primary")     0%, thrubiTheme("thrubi-secondary")     50%, thrubiTheme("thrubi-success") 100%) 60 1;
+  $thrubi-gradient-r: -webkit-linear-gradient(  0deg, thrubiTheme("thrubi-primary") 0%,thrubiTheme("thrubi-secondary") 50%,thrubiTheme("thrubi-success") 100%);
+  $thrubi-gradient-b: -webkit-linear-gradient( 90deg, thrubiTheme("thrubi-primary") 0%,thrubiTheme("thrubi-secondary") 50%,thrubiTheme("thrubi-success") 100%);
+  $thrubi-gradient-l: -webkit-linear-gradient(180deg, thrubiTheme("thrubi-primary") 0%,thrubiTheme("thrubi-secondary") 50%,thrubiTheme("thrubi-success") 100%);
+  $thrubi-gradient-t: -webkit-linear-gradient(270deg, thrubiTheme("thrubi-primary") 0%,thrubiTheme("thrubi-secondary") 50%,thrubiTheme("thrubi-success") 100%);
+
+  @if ($thrubi-gradient=="thrubi-gradient-t")      { @return $thrubi-gradient-t; }
+  @if ($thrubi-gradient=="thrubi-gradient-r")      { @return $thrubi-gradient-r; }
+  @if ($thrubi-gradient=="thrubi-gradient-b")      { @return $thrubi-gradient-b; }
+  @if ($thrubi-gradient=="thrubi-gradient-l")      { @return $thrubi-gradient-l; }
+  @if ($thrubi-gradient=="thrubi-gradient-titlebar")      { @return $thrubi-gradient-titlebar; }
+}
